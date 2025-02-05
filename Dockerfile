@@ -26,8 +26,6 @@ EXPOSE 8080
 
 # Copy the built .jar from the build stage
 COPY --from=build /app/target/*.jar app.jar
-COPY wait-for-config.sh /app/wait-for-config.sh
-RUN chmod +x /app/wait-for-config.sh
 
 
 # Run the application
